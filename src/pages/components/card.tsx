@@ -1,14 +1,19 @@
-// components/Card.tsx
 import { Receita } from "@/interfaces/interfaces";
 import styles from "@/styles/Home.module.css";
+import Image from "next/image";
 import { useRouter } from "next/router";
 
 interface CardProps {
-  receita: Receita;
+  receita: Receita | undefined; // Ajuste para permitir `undefined`
 }
 
 export default function Card({ receita }: CardProps) {
   const router = useRouter();
+
+  // Verifique se receita está definido
+  if (!receita) {
+    return <div>Receita não encontrada</div>;
+  }
 
   const visualizarReceita = () => {
     router.push({

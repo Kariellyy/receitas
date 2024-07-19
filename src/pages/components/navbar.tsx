@@ -1,13 +1,15 @@
+import Link from "next/link";
+
 export default function Navbar() {
   return (
     <nav className="navbar navbar-light bg-light">
       <div className="container">
-        <a className="navbar-brand" href="/">
+        <Link className="navbar-brand" href="/">
           Minhas Receitas
-        </a>
-        <a className="btn btn-success" href="/cadastrar-receita">
+        </Link>
+        <Link className="btn btn-success" href="/cadastrar-receita">
           Adiconar receita
-        </a>
+        </Link>
       </div>
     </nav>
   );

@@ -1,4 +1,3 @@
-
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -6,6 +5,7 @@ import styles from "@/styles/VisualizarReceita.module.css";
 import Navbar from "./components/navbar";
 import Head from "next/head";
 import { Receita } from "@/interfaces/interfaces";
+import Image from "next/image";
 
 const VisualizarReceita = () => {
   const router = useRouter();
@@ -14,7 +14,7 @@ const VisualizarReceita = () => {
   useEffect(() => {
     if (router.query) {
       const { id, titulo, descricao, receita, modoPreparo } = router.query;
-      setReceita({id, titulo, descricao, receita, modoPreparo } as Receita);
+      setReceita({ id, titulo, descricao, receita, modoPreparo } as Receita);
     }
   }, [router.query]);
 
@@ -76,7 +76,9 @@ const VisualizarReceita = () => {
                   <hr />
                   <h4>Modo de preparo</h4>
                   <p className="card-text">{receita.modoPreparo}</p>
-                  <button className="btn btn-danger" onClick={excluirReceita}>Apagar</button>
+                  <button className="btn btn-danger" onClick={excluirReceita}>
+                    Apagar
+                  </button>
                 </div>
               </div>
             </div>
