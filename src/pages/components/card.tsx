@@ -40,7 +40,7 @@ export default function Card({ receita }: CardProps) {
         <p className="card-text">
           {receita.descricao}
         </p>
-        <button className="btn btn-success w-100" onClick={visualizarReceita}>
+        <button className="btn btn-outline-primary w-100" onClick={visualizarReceita}>
           Visualizar Receita
         </button>
       </div>

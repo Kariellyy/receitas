@@ -1,4 +1,4 @@
-// pages/index.tsx
+
 import Head from "next/head";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "./components/card";
@@ -43,6 +43,9 @@ export default function Home() {
           </div>
         </div>
       </main>
+      <footer className="container-fluid d-flex justify-content-center align-items-center position-fixed bottom-0">
+        <p className="text-center">Desenvolvido por Karielly de Carvalho</p>
+      </footer>
     </>
   );
 }

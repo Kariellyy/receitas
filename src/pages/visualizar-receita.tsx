@@ -5,7 +5,7 @@ import styles from "@/styles/VisualizarReceita.module.css";
 import Navbar from "./components/navbar";
 import Head from "next/head";
 import { Receita } from "@/interfaces/interfaces";
-import Image from "next/image";
+
 
 const VisualizarReceita = () => {
   const router = useRouter();
